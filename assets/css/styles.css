@@ -308,6 +308,38 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Adjust spacing between images */
+  margin-top: var(--mb-4); /* Example margin from your existing CSS */
+}
+
+.work__img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); /* Example shadow effect */
+}
+
+.work__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.work__img:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.project-names {
+  margin-top: 20px; /* Adjust spacing between images and project names */
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Use Google Font */
+  font-size: var(--normal-font-size); /* Example font size */
+  color: var(--second-color); /* Example text color */
+}
+.work__container {
   row-gap: 2rem;
 }
 .work__img {
